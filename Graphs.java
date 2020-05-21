@@ -1,15 +1,21 @@
 /*
- * Project 5 - Kruksal Minimum Spanning Tree
+ * Simple Implementation for Kruksal Minimum Spanning Tree
+ * The input is taken from a CSV file which has the adjacency list of the graph.
  * Done By:- Sarvesh.K.Ramiya
  * Date : 7/25/19
  */
 import java.util.*;
 import java.io.*;
+
+//Code for Disjoint sets has been taken from https://users.cs.fiu.edu/~weiss/dsaajava2/code/DisjSets.java
+
 class DisjSets
 {
-    /**
+    /*
+     *
      * Construct the disjoint sets object.
      * @param numElements the initial number of disjoint sets.
+     *
      */
     public DisjSets( int numElements )
     {
@@ -18,12 +24,14 @@ class DisjSets
             s[ i ] = -1;
     }
 
-    /**
+    /*
+     *
      * Union two disjoint sets using the height heuristic.
      * For simplicity, we assume root1 and root2 are distinct
      * and represent set names.
      * @param root1 the root of set 1.
      * @param root2 the root of set 2.
+     *
      */
     public void union( int root1, int root2 )
     {
@@ -37,11 +45,13 @@ class DisjSets
         }
     }
 
-    /**
+    /*
+     *
      * Perform a find with path compression.
      * Error checks omitted again for simplicity.
      * @param x the element being searched for.
      * @return the set containing x.
+     *
      */
     public int find( int x )
     {
