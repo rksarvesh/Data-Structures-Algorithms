@@ -260,7 +260,7 @@ public class Graphs
    {
       Graphs g = new Graphs();
       ArrayList<ArrayList<String>> data = new ArrayList<>();
-      BufferedReader csvReader = new BufferedReader(new FileReader("assn9_data.csv"));
+      BufferedReader csvReader = new BufferedReader(new FileReader("kruksal_data.csv"));
       String row;
       int i=0;
       //Reading the Vertices
@@ -271,7 +271,7 @@ public class Graphs
          i++;
       }
       csvReader.close();
-      BufferedReader csvReader1 = new BufferedReader(new FileReader("assn9_data.csv"));
+      BufferedReader csvReader1 = new BufferedReader(new FileReader("kruksal_data.csv"));
       int j=0;
       //Reading the edges
       while((row = csvReader1.readLine()) != null)
